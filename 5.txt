@@ -1,0 +1,32 @@
+<?php
+
+function charToNumber($char) {
+    return (ord(strtolower($char)) - 96);
+}
+
+function nilaiNama($nama) {
+    $nilai = array();
+    $splitNama = explode(" ", $nama);
+    sort($splitNama);
+    
+    echo "[";
+    
+    for ($i = 0; $i < count($splitNama); $i++) {
+        $nilai[$i] = 0;
+        $splitPerChar = $splitNama[$i];
+        
+        for ($j = 0; $j < strlen($splitNama[$i]); $j++) {
+            $nilai[$i] += charToNumber($splitPerChar[$j]);
+        }
+        $nilai[$i] *= ($i + 1);
+        
+        echo $nilai[$i];
+        if ($i < count($splitNama)-1) {
+            echo ", ";
+        }
+    }
+    
+    echo "]";
+}
+
+nilaiNama("Christoper Slovanoski");

@@ -1,0 +1,25 @@
+<?php
+
+function buyNoodle($tgl, $uang) {
+    $hargaMie = 1000;
+    $jlhMie = floor($uang / $hargaMie);
+    
+    if ($tgl%2 == 1) {
+        $bonus = floor($jlhMie / 3);
+    } else {
+        $bonus = floor($jlhMie / 4);
+    }
+    
+    if ($tgl%5 == 0) {
+        if ($bonus%2 == 0) {
+            $bonus *= 10;
+        } else {
+            $bonus *= 5;
+        }
+        
+    }
+    
+    echo $jlhMie + $bonus;
+}
+
+buyNoodle(25, 50000);

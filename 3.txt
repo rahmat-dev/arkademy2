@@ -1,0 +1,55 @@
+<?php
+
+function operasi($angka) {
+    while ($angka > 1) {
+        if ($angka % 2 == 0) {
+            echo $angka;
+            $angka /= 2;
+        } else {
+            echo $angka;
+            $angka = 3*$angka + 1;
+        }
+        
+        echo " -> ";
+    }
+    
+    echo 1;
+}
+
+operasi(100);
+
+==================================================
+
+<?php
+
+function operasi($angka) {
+    $tmp = 0;
+    $terbanyak = 0;
+    for ($i = 1; $i <= $angka; $i++) {
+        $n = $i;
+        $jlhOperasi = 0;
+        while ($n > 1) {
+            if ($n % 2 == 0) {
+                // echo $n;
+                $n /= 2;
+            } else {
+                // echo $n;
+                $n = 3*$n + 1;
+            }
+            
+            $jlhOperasi++;
+            // echo " -> ";
+        }
+        
+        $tmp = $jlhOperasi;
+        
+        if ($terbanyak < $tmp) {
+            $terbanyak = $tmp;
+            $bil = $i;
+        }
+    }
+    
+    echo "Bilangan Asli dengan operasi terbanyak = " . $bil;
+}
+
+operasi(100);
