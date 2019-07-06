@@ -2,6 +2,8 @@
 
 Disini saya menggunakan bahasa pemrograman PHP dan software yang dibutuhkan adalah Apache Server & MySql (XAMPP).
 
+Kegunaan JSON pada REST API adalah sebagai format data yang memudahkan dalam pertukaran data.
+
 Untuk query pada soal nomor 7.A berada dalam folder 7/A
 Untuk menjalankan aplikasi pada soal nomor 7, diharapkan import terlebih dahulu database yang ada pada folder 7, kemudian jalankan aplikasi yang berada pada folder C.
 
