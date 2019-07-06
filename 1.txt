@@ -1,0 +1,38 @@
+<?php
+
+function biodata() {
+    return [
+        'name' => 'Rahmat Sulistio',
+        'age' => 19,
+        'address' => 'Jalan Sejati 11',
+        'hobbies' => ['Sepak Bola', 'Ngoding', 'Baca Buku'],
+        'is_married' => false,
+        'list_school' => [
+            [
+                'name' => 'SMP Negeri 1 Tanjungbalai',
+                'year_in' => '2011',
+                'year_out' => '2014',
+                'major' => null
+            ],
+            [
+                'name' => 'SMA Negeri 1 Tanjungbalai',
+                'year_in' => '2014',
+                'year_out' => '2017',
+                'major' => null
+            ],
+        ],
+        'skills' => [
+            [
+                'skill_name' => 'PHP',
+                'level' => 'intermediate'
+            ],
+            [
+                'skill_name' => 'JAVA',
+                'level' => 'beginner'
+            ],
+        ],
+        'interest_in_coding' => true
+    ];
+}
+
+echo json_encode(biodata());
